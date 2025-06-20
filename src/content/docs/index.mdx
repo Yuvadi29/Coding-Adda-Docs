@@ -1,27 +1,31 @@
 ---
-title: Welcome to Starlight
+title: Coding Adda Docs
 description: Get started building your docs site with Starlight.
 template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import Logo from '../../assets/logo.png';
 
-## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
+<section style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; padding: 3rem 1rem;">
+  <div style="max-width: 500px; text-align: left;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">The docs you will actually read</h1>
+    <p style="margin-bottom: 2rem; font-size: 1.25rem;">Get started building your docs site with Starlight.</p>
+    <div>
+      <a href="/guides/example/" class="button">Start Learning →</a>
+      <a href="https://www.youtube.com/@Coding_Adda" class="button button-minimal" target="_blank" rel="noopener">Watch Videos ↗</a>
+    </div>
+  </div>
+
+  <div>
+    <img src={Logo.src} alt="Coding Adda Logo" class="floating-logo" style="width: 200px;" />
+  </div>
+</section>
+
+
+{/* <CardGrid stagger>
+	<Card title="Update content" icon="pencil" class="starlight-card">
 		Edit `src/content/docs/index.mdx` to see this page change.
 	</Card>
 	<Card title="Add new content" icon="add-document">
@@ -33,4 +37,4 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 	<Card title="Read the docs" icon="open-book">
 		Learn more in [the Starlight Docs](https://starlight.astro.build/).
 	</Card>
-</CardGrid>
+</CardGrid> */}

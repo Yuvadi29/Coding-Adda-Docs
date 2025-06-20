@@ -1,0 +1,69 @@
+/* Dark mode colors. */
+:root {
+  --sl-color-accent-low: #381c01;
+  --sl-color-accent: #ff9002;
+  --sl-color-accent-high: #ff9002;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #eaeef5;
+  --sl-color-gray-2: #bdc2ca;
+  --sl-color-gray-3: #838c9b;
+  --sl-color-gray-4: #505967;
+  --sl-color-gray-5: #313946;
+  --sl-color-gray-6: #202733;
+  --sl-color-black: #15181e;
+}
+/* Light mode colors. */
+:root[data-theme="light"] {
+  --sl-color-accent-low: #ff9002;
+  --sl-color-accent: #ff9002;
+  --sl-color-accent-high: #4d2700;
+  --sl-color-white: #15181e;
+  --sl-color-gray-1: #202733;
+  --sl-color-gray-2: #313946;
+  --sl-color-gray-3: #505967;
+  --sl-color-gray-4: #838c9b;
+  --sl-color-gray-5: #bdc2ca;
+  --sl-color-gray-6: #eaeef5;
+  --sl-color-gray-7: #f4f6fa;
+  --sl-color-black: #ffffff;
+}
+
+/* Floating animation for the logo */
+@keyframes floatUpDown {
+	0%, 100% {
+	  transform: translateY(0px);
+	}
+	50% {
+	  transform: translateY(-15px);
+	}
+  }
+  
+  .floating-logo {
+	animation: floatUpDown 4s ease-in-out infinite;
+  }
+  
+  /* Button styles */
+  .button {
+	background: var(--sl-color-accent);
+	color: white;
+	padding: 0.75rem 1.5rem;
+	margin-right: 1rem;
+	border-radius: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-block;
+	transition: background 0.3s;
+  }
+  .button:hover {
+	background: var(--sl-color-accent-high);
+  }
+  
+  .button-minimal {
+	background: transparent;
+	color: var(--sl-color-accent);
+	border: 2px solid var(--sl-color-accent);
+  }
+  .button-minimal:hover {
+	background: var(--sl-color-accent-low);
+  }
+  
