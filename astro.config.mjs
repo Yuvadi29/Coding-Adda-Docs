@@ -2,6 +2,10 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 
+import vercel from '@astrojs/vercel';
+
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -19,37 +23,32 @@ export default defineConfig({
           label: 'GitHub',
           href: 'https://github.com/Yuvadi29/Coding-Adda-Docs'
         },
-		{
-			icon: 'instagram',
-			label: 'instagram',
-			href: 'https://instagram.com/_coding_adda'
-		},
-		{
-			icon: 'linkedin',
-			label: 'linkedin',
-			href: 'https://www.linkedin.com/company/addacoding'
-		}
+        {
+            icon: 'instagram',
+            label: 'instagram',
+            href: 'https://instagram.com/_coding_adda'
+        },
+        {
+            icon: 'linkedin',
+            label: 'linkedin',
+            href: 'https://www.linkedin.com/company/addacoding'
+        }
       ],
       sidebar: [
         {
           label: "Learn HTML",
           autogenerate: {directory: 'Learn-HTML'}
         },
-        {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' }
-          ]
-        },
-        {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' }
-        }
       ],
       customCss: [
         './src/style.css'
-      ]
-    })
-  ]
+      ],
+    }),
+  ],
+
+  adapter: vercel(),
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 })

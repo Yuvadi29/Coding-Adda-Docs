@@ -1,40 +1,34 @@
 ---
 title: Coding Adda Docs
-description: Get started building your docs site with Starlight.
+description: The docs you'll actually read
 template: splash
+pageFind: false
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import Logo from '../../assets/logo.png';
+import { Logo } from '../../assets/logo.png';
 
-
-<section style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; padding: 3rem 1rem;">
-  <div style="max-width: 500px; text-align: left;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">The docs you will actually read</h1>
-    <p style="margin-bottom: 2rem; font-size: 1.25rem;">Get started building your docs site with Starlight.</p>
-    <div>
-      <a href="/guides/example/" class="button">Start Learning →</a>
-      <a href="https://www.youtube.com/@Coding_Adda" class="button button-minimal" target="_blank" rel="noopener">Watch Videos ↗</a>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Coding Adda</h1>
+    <p>Build, learn, and explore with joy. All in one place.</p>
+    <div class="hero-buttons">
+      <a href="/guides/example/" class="btn primary">Start Learning →</a>
+      <a href="https://www.youtube.com/@Coding_Adda" class="btn secondary" target="_blank">Watch Videos ↗</a>
     </div>
   </div>
-
-  <div>
-    <img src={Logo.src} alt="Coding Adda Logo" class="floating-logo" style="width: 200px;" />
+  <div class="hero-image">
+    <img src={Logo} alt="Coding Adda Logo" class="floating-logo" />
   </div>
+  
 </section>
 
+<section class="features">
+  <CardGrid>
+    <Card title="Community" icon="users">Learn together with peers and mentors.</Card>
+    <Card title="Peer Code Reviews" icon="code-review">Get and give feedback.</Card>
+    <Card title="Live Cohorts" icon="live">Join live training sessions.</Card>
+    <Card title="Bounties" icon="gift">Earn while learning with real challenges.</Card>
+  </CardGrid>
+</section>
 
-{/* <CardGrid stagger>
-	<Card title="Update content" icon="pencil" class="starlight-card">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid> */}
